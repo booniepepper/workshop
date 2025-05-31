@@ -1,0 +1,12 @@
+#!/bin/sh
+
+set -eux
+
+[ "${1:-x}" = 'x' ] \
+    && >&2 echo 'USAGE: clone REPO' \
+    && exit 1
+
+cd "$(dirname "$0")" \
+    || exit 1
+
+exec gh repo clone "$1" "$1"
