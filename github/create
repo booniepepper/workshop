@@ -9,4 +9,5 @@ set -eux
 cd "$(dirname "$0")" \
     || exit 1
 
-exec gh repo create --clone "$1" "$1" "${@:2}"
+gh repo create --public "$1" \
+  && ./clone "$1"
