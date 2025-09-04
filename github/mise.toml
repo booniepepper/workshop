@@ -1,3 +1,8 @@
 [env]
 GIT_AUTHOR_NAME="Justin Hill"
 GIT_AUTHOR_EMAIL="justin@so.dang.cool"
+
+[tools]
+bun = "latest"
+node = "latest"
+pnpm = "latest"
